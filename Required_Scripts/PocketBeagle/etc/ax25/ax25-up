@@ -1,0 +1,14 @@
+#!/bin/bash
+# /etc/ax25/ax25-up
+
+# Set Sysctl values
+#sysctl -w kernel.panic=30          # Set the kernel to automatically reboot 30 seconds after a kernel panic
+#sysctl -w kernel.panic_on_oops=30  # panic if there's an oops (BUG)
+
+#Attach KISS-device 
+#/usr/sbin/kissattach /dev/ttyS4 vhf | tail -1 > /tmp/ax25-config.tmp
+#awk '/device/ { print $7 }' /tmp/ax25-config.tmp > /tmp/ax25-config-tmp
+#Device=`cat /tmp/ax25-config-tmp`
+
+# Install Parameter: Persistence=128, slot=10, TX-Delay=250
+#/usr/sbin/kissparms -p 2m -r 128 -s 10 -l 20 -t 250
